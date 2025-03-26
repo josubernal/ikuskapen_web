@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/josubernal/ikuskapen_web/static/css/main.4eb570e3.css",
+    "main.js": "/josubernal/ikuskapen_web/static/js/main.d773f78b.js",
+    "index.html": "/josubernal/ikuskapen_web/index.html",
+    "main.4eb570e3.css.map": "/josubernal/ikuskapen_web/static/css/main.4eb570e3.css.map",
+    "main.d773f78b.js.map": "/josubernal/ikuskapen_web/static/js/main.d773f78b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4eb570e3.css",
+    "static/js/main.d773f78b.js"
+  ]
+}

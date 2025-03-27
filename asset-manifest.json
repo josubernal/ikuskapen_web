@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/josubernal/ikuskapen_web/static/css/main.4eb570e3.css",
-    "main.js": "/josubernal/ikuskapen_web/static/js/main.4333850b.js",
-    "index.html": "/josubernal/ikuskapen_web/index.html",
-    "main.4eb570e3.css.map": "/josubernal/ikuskapen_web/static/css/main.4eb570e3.css.map",
-    "main.4333850b.js.map": "/josubernal/ikuskapen_web/static/js/main.4333850b.js.map"
+    "main.css": "/ikuskapen_web/static/css/main.4eb570e3.css",
+    "main.js": "/ikuskapen_web/static/js/main.4333850b.js",
+    "index.html": "/ikuskapen_web/index.html",
+    "main.4eb570e3.css.map": "/ikuskapen_web/static/css/main.4eb570e3.css.map",
+    "main.4333850b.js.map": "/ikuskapen_web/static/js/main.4333850b.js.map"
   },
   "entrypoints": [
     "static/css/main.4eb570e3.css",

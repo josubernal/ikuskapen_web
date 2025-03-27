@@ -261,8 +261,9 @@ a:focus,
   max-width: 100%;
 }
 .intro {
-  height: 100vh; /* 80% of screen height */
-  min-height: 90vh; /* Ensures it doesn't shrink below 80% */
+  max-width: 100%;
+  height: 100vh; /* 80% of screen hnpeight */
+  max-height: 100vh; /* Ensures it doesn't shrink below 80% */
   width: 100%;
   padding: 0;
   margin: 0;
@@ -300,6 +301,7 @@ a:focus,
   margin-bottom: 60px;
 }
 header .intro-text {
+  max-width: 100%;
   padding-top: 350px;
   padding-bottom: 200px;
   text-align: center;
@@ -566,5 +568,19 @@ label {
 @media (max-width: 768px) {
   #about img {
     margin: 50px 0;
+  }
+}
+
+
+@media (max-width: 480px) { /* Phones */
+  .intro-text h1 {
+    font-size: 40px;
+  }
+  .intro-text p {
+    font-size: 14px;
+  }
+  .btn-custom {
+    width: 100%;
+    font-size: 14px;
   }
 }

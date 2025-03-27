@@ -1,16 +1,16 @@
 :root {
-  --green-0: #E7E8C4;
-  --green-1: #DDE5B6;
-  --green-2: #808A6C;
-  --green-3: #232E21;
-  --brown-0: #9A8D84;
-  --brown-1: #908278;
-  --brown-2: #79675C;
-  --brown-3: #6C584C;
+  --green-0: #A6DD8E;
+  --green-1: #96D690;
+  --green-2: #97C981;
+  --green-3: #235835;
+  --brown-0: #61BDB5;
+  --brown-1: #168AAD;
+  --brown-2: #1A759F;
+  --brown-3: #184E77;
   --purple: #938BA1;
   --white: #F5F5F5;
   --dark: #090909;
-  --light:#F0EAD2;
+  --light: #E2F3ED;
 }
 
 body,
@@ -27,6 +27,7 @@ html {
   background-color: var(--light);
   overflow-x: hidden;
   max-width: 100%;
+  scroll-behavior: smooth;
 }
 h2,
 h3,
@@ -92,6 +93,10 @@ hr {
 }
 
 /* Navigation */
+.logo{
+  margin:0;
+  width: 50;
+}
 #menu {
   padding: 15px;
   transition: all 0.8s;
@@ -104,6 +109,17 @@ hr {
   border-color: var(--light);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   content: "center";
+}
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adjust spacing */
+  padding-top: 0px; /* Move it higher */
+  padding-bottom: 5px;
+  margin-right: 5px;
+  margin-top: 0;
+  position: absolute !important;
+  bottom: -1px !important;
 }
 #menu a.navbar-brand {
   font-family: "Raleway", sans-serif;

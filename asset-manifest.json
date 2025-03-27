@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/ikuskapen_web/static/css/main.4eb570e3.css",
-    "main.js": "/ikuskapen_web/static/js/main.4333850b.js",
+    "main.js": "/ikuskapen_web/static/js/main.792a5d88.js",
     "index.html": "/ikuskapen_web/index.html",
     "main.4eb570e3.css.map": "/ikuskapen_web/static/css/main.4eb570e3.css.map",
-    "main.4333850b.js.map": "/ikuskapen_web/static/js/main.4333850b.js.map"
+    "main.792a5d88.js.map": "/ikuskapen_web/static/js/main.792a5d88.js.map"
   },
   "entrypoints": [
     "static/css/main.4eb570e3.css",
-    "static/js/main.4333850b.js"
+    "static/js/main.792a5d88.js"
   ]
 }

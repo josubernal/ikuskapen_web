@@ -1,16 +1,16 @@
 :root {
-  --green-0: #A6DD8E;
-  --green-1: #96D690;
-  --green-2: #97C981;
+  --green-0: #a1dc86;
+  --green-1: #93c67b;
+  --green-2: #73a05f;
   --green-3: #235835;
-  --brown-0: #61BDB5;
-  --brown-1: #168AAD;
-  --brown-2: #1A759F;
-  --brown-3: #184E77;
-  --purple: #938BA1;
-  --white: #F5F5F5;
+  --brown-0: #61bdb5;
+  --brown-1: #168aad;
+  --brown-2: #1a759f;
+  --brown-3: #184e77;
+  --purple: #fc9e4f;
+  --white: #f5f5f5;
   --dark: #090909;
-  --light: #E2F3ED;
+  --light: #e2f3ed;
 }
 
 body,
@@ -93,8 +93,8 @@ hr {
 }
 
 /* Navigation */
-.logo{
-  margin:0;
+.logo {
+  margin: 0;
   width: 50;
 }
 #menu {
@@ -106,8 +106,8 @@ hr {
   height: 20;
 }
 #menu.navbar-default {
-  background-color: var(--light);
-  border-color: var(--light);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: transparent;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   content: "center";
 }
@@ -169,7 +169,11 @@ hr {
   bottom: -1px !important;
   width: 100% !important;
   height: 2px !important;
-  background: linear-gradient(to right, var(--brown-3) 0%, var(--brown-2) 100%) !important;
+  background: linear-gradient(
+    to right,
+    var(--brown-3) 0%,
+    var(--brown-2) 100%
+  ) !important;
   content: "" !important;
   transition: width 0.2s !important;
 }
@@ -177,20 +181,34 @@ hr {
   border-radius: 0;
   margin-top: 0;
   padding: 0;
-  border-color: var(--light);
-  color: var(--dark)
+  border-color: transparent;
+  color: var(--dark);
 }
 .navbar-default .navbar-toggle > .icon-bar {
   background-color: var(--dark);
 }
+button.navbar-toggle:focus {
+  outline: 0 !important;
+  outline-offset: 0 !important;
+  background-color: transparent !important;
+}
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-  background-color: var(--light);
-  border-color: var(--light);
+  background-color: transparent;
+  border-color: transparent;
 }
 .navbar-default .navbar-toggle:hover > .icon-bar {
-  background-color: var(--brown-3);
+  background-color: var(--white);
 }
+.navbar-collapse.in {
+  display: flex;
+  padding-top: 10px; /* Move it higher */
+  margin-right: 5px;
+  margin-top: 10;
+  bottom: -1px !important;
+  border-color: transparent;
+}
+
 /*********************/
 .section-title {
   margin-bottom: 70px;
@@ -219,7 +237,11 @@ hr {
   text-transform: uppercase;
   color: var(--white);
   background-color: var(--brown-0);
-  background-image: linear-gradient(to right, var(--brown-0), var(--brown-1) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--brown-0),
+    var(--brown-1) 100%
+  );
   padding: 14px 34px;
   letter-spacing: 1px;
   margin: 0;
@@ -257,7 +279,7 @@ a:focus,
 }
 /* Header Section */
 /* Adjust the header height to 80% of the viewport */
-#header{
+#header {
   max-width: 100%;
 }
 .intro {
@@ -276,7 +298,7 @@ a:focus,
   height: 100%;
   width: 100%;
   display: flex;
-  align-items: center; 
+  align-items: center;
   background: rgba(0, 0, 0, 0.2);
 }
 .intro h1 {
@@ -321,9 +343,48 @@ header .intro-text {
   height: 100px;
   padding: 30px 0;
   border-radius: 50%;
-  background: linear-gradient(to right, var(--brown-0) 0%,var(--brown-1)100%);
-  box-shadow:  10px 10px 10px rgba(0, 0, 0, 0.05);
+  background: linear-gradient(to right, var(--brown-0) 0%, var(--brown-1) 100%);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
 }
+/* Focus Section */
+#focus {
+  max-width: 100%;
+  padding: 100px 0;
+  background: linear-gradient(
+    to bottom,
+    var(--brown-0) 0%,
+    var(--brown-2) 100%
+  );
+}
+#focus .row {
+  padding: 30px 30px;
+}
+#focus h3 {
+  font-size: 22px;
+  margin: 10 0 20px;
+  font-weight: 700;
+}
+#focus h2 {
+  position: relative;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  color: var(--white);
+}
+#focus h2::after {
+  position: absolute;
+  content: "";
+  background: linear-gradient(to right, var(--purple) 0%, var(--light) 100%);
+  height: 4px;
+  width: 60px;
+  bottom: 0;
+  left: 0;
+}
+
+#focus p {
+  line-height: 24px;
+  margin: 30px 0;
+}
+
 /* About Section */
 #about {
   max-width: 100%;
@@ -377,53 +438,42 @@ header .intro-text {
 #services {
   max-width: 100%;
   padding: 100px 0;
-  background: linear-gradient(to bottom, var(--brown-0) 0%, var(--brown-3) 100%);
+  background: var(--white);
+}
+
+#services i.fa {
+  font-size: 38px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  transition: all 0.5s;
   color: var(--white);
+  width: 100px;
+  height: 100px;
+  padding: 30px 0;
+  border-radius: 50%;
+  background: linear-gradient(to right, var(--green-0) 0%, var(--green-2) 100%);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
 }
-#services .service-desc {
-  margin: 10px 10px 20px;
-}
-#services h2 {
-  color: var(--white);
-}
-#services .section-title h2::after {
+
+#services h2::after {
   position: absolute;
   content: "";
-  background: var(--purple);
+  background: linear-gradient(to right, var(--green-0) 0%, var(--green-3) 100%);
   height: 4px;
   width: 60px;
   bottom: 0;
   margin-left: -30px;
   left: 50%;
 }
-#services i.fa {
-  font-size: 42px;
-  width: 120px;
-  height: 120px;
-  padding: 40px 0;
-  background: var(--purple);
-  border-radius: 50%;
-  color: var(--light);
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
-}
-#services h3 {
-  font-weight: 500;
-  padding: 5px 0;
-  color: var(--white);
-}
-#services p {
-  color: var(--dark);
-}
-#services .service-desc {
-  margin-bottom: 40px;
-}
-
-
 /* Contact Section */
 #contact {
   max-width: 100%;
   padding: 100px 0 60px;
-  background: var(--green-2);
+  background: linear-gradient(
+    to bottom,
+    var(--brown-0) 0%,
+    var(--brown-2) 100%
+  );
   color: var(--white);
 }
 #contact .section-title {
@@ -449,13 +499,10 @@ header .intro-text {
 }
 #contact h3 {
   color: var(--brown-3);
-  margin-top: 80px;
-  margin-bottom: 25px;
-  padding-bottom: 20px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
   font-weight: 700;
-}
-#contact form {
-  padding-top: 20px;
 }
 #contact .text-danger {
   color: var(--purple);
@@ -472,50 +519,7 @@ header .intro-text {
   color: var(--white);
   background: var(--brown-2);
 }
-label {
-  font-size: 12px;
-  font-weight: 400;
-  font-family: "Open Sans", sans-serif;
-  float: left;
-}
-#contact .form-control {
-  display: block;
-  width: 100%;
-  padding: 6px 12px;
-  font-size: 16px;
-  line-height: 1.42857143;
-  color: var(--green-2);
-  background-color: var(--white);
-  background-image: none;
-  border: 1px solid var(--white);
-  border-radius: 0;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  -webkit-transition: none;
-  -o-transition: none;
-  transition: none;
-}
-#contact .form-control:focus {
-  border-color: var(--green-3);
-  outline: 0;
-  -webkit-box-shadow: transparent;
-  box-shadow: transparent;
-}
-.form-control::-webkit-input-placeholder {
-  color: var(--dark);
-}
-.form-control:-moz-placeholder {
-  color: var(--dark);
-}
-.form-control::-moz-placeholder {
-  color: var(--dark);
-}
-.form-control:-ms-input-placeholder {
-  color: var(--dark);
-}
-#contact .contact-item {
-  margin: 20px 0;
-}
+
 #contact .contact-item span {
   color: var(--white);
   margin-bottom: 10px;
@@ -548,9 +552,25 @@ label {
   color: var(--green-0);
   background: var(--white);
 }
+
+/* Alliances */
+
+#alliances {
+  max-width: 100%;
+  padding: 30px 0;
+  background-color: var(--white);
+}
+
+#alliances img {
+  width: 200px;
+  margin-top: 10px;
+  border-right: 0;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+}
+
 /* Footer Section*/
 #footer {
-  background: var(--light);
+  background: var(--white);
   padding: 30px 0;
   max-width: 100%;
 }
@@ -571,8 +591,8 @@ label {
   }
 }
 
-
-@media (max-width: 480px) { /* Phones */
+@media (max-width: 480px) {
+  /* Phones */
   .intro-text h1 {
     font-size: 40px;
   }

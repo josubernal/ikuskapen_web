@@ -99,7 +99,8 @@ hr {
 }
 #menu {
   max-width: 100%;
-  padding: 15px;
+  padding-top: 15px;
+  padding-right: 0px;
   transition: all 0.8s;
 }
 #menu.navbar {
@@ -114,20 +115,19 @@ hr {
 .navbar-brand {
   display: flex;
   align-items: center;
-  gap: 10px; /* Adjust spacing */
+  gap: 2px; /* Adjust spacing */
   padding-top: 0px; /* Move it higher */
   padding-bottom: 5px;
-  margin-right: 5px;
   margin-top: 0;
+  padding-right: 0px;
   position: absolute !important;
   bottom: -1px !important;
 }
 #menu a.navbar-brand {
   font-family: "Raleway", sans-serif;
-  font-size: 24px;
   font-weight: 700;
   margin: 0;
-  padding: 0px 2px;
+  padding: 0px;
   color: var(--dark);
   text-transform: uppercase;
 }
@@ -135,11 +135,11 @@ hr {
   font-family: "Lato", sans-serif;
   text-transform: uppercase;
   color: var(--dark);
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 400;
   padding: 0px 2px;
   border-radius: 0;
-  margin: 0 20px 0;
+  margin: 0 10 0;
 }
 #menu.navbar-default .navbar-nav > li > a:after {
   display: block;
@@ -355,11 +355,13 @@ header .intro-text {
     var(--brown-0) 0%,
     var(--brown-2) 100%
   );
+  color: var(--white)
 }
 #focus .row {
   padding: 30px 30px;
 }
 #focus h3 {
+  color: var(--white);
   font-size: 22px;
   margin: 10 0 20px;
   font-weight: 700;
@@ -410,20 +412,7 @@ header .intro-text {
   bottom: 0;
   left: 0;
 }
-#about .about-text li {
-  margin-bottom: 6px;
-  margin-left: 6px;
-  list-style: none;
-  padding: 0;
-}
-#about .about-text li:before {
-  content: "\f00c";
-  font-family: "FontAwesome";
-  color: var(--green-2);
-  font-size: 11px;
-  font-weight: 300;
-  padding-right: 8px;
-}
+
 #about img {
   width: 700px;
   margin-top: 10px;
@@ -468,7 +457,7 @@ header .intro-text {
 /* Contact Section */
 #contact {
   max-width: 100%;
-  padding: 100px 0 60px;
+  padding: 100px 0;
   background: linear-gradient(
     to bottom,
     var(--brown-0) 0%,
@@ -510,14 +499,14 @@ header .intro-text {
 }
 #contact .btn-custom {
   margin: 30px 0;
-  font-weight: 700;
-  color: var(--brown-3);
-  background: transparent;
-  border: 2px solid var(--brown-3);
+  font-weight: 1000;
+  color: var(--white);
+  background: var(--purple);
+  border: 2px solid var(--purple);
 }
 #contact .btn-custom:hover {
   color: var(--white);
-  background: var(--brown-2);
+  background: transparent;
 }
 
 #contact .contact-item span {
@@ -553,6 +542,60 @@ header .intro-text {
   background: var(--white);
 }
 
+/* Focus Section */
+#why {
+  max-width: 100%;
+  padding: 100px 0;
+  background: linear-gradient(
+    to bottom,
+    var(--brown-0) 0%,
+    var(--brown-2) 100%
+  );
+  color: var(--white)
+}
+#why .row {
+  padding: 30px 30px;
+}
+#why h3 {
+  font-size: 22px;
+  margin: 10 0 20px;
+  font-weight: 700;
+}
+#why h2 {
+  position: relative;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  color: var(--white);
+}
+#why h2::after {
+  position: absolute;
+  content: "";
+  background: linear-gradient(to right, var(--purple) 0%, var(--light) 100%);
+  height: 4px;
+  width: 60px;
+  bottom: 0;
+  left: 0;
+}
+
+#why p {
+  line-height: 24px;
+  margin: 30px 0;
+}
+
+#why li {
+  margin-bottom: 6px;
+  margin-left: 6px;
+  list-style: none;
+  padding: 10;
+}
+#why  li:before {
+  content: "\f00c";
+  font-family: "FontAwesome";
+  color: var(--purple);
+  font-size: 11px;
+  font-weight: 300;
+  padding-right: 8px;
+}
 /* Alliances */
 
 #alliances {
@@ -563,6 +606,12 @@ header .intro-text {
 
 #alliances img {
   width: 200px;
+  mix-blend-mode: multiply;
+  object-fit: contain;
+  margin:70;
+  background: var(--white) !important;
+  background-color: var(--white) !important;
+  position: relative;
   margin-top: 10px;
   border-right: 0;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);

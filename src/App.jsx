@@ -4,8 +4,10 @@ import { Header } from "./components/header";
 import { Features } from "./components/features";
 import { About } from "./components/about";
 import { Services } from "./components/services";
-
+import { Focus } from "./components/focus";
+import { Alliances } from "./components/alliances";
 import { Contact } from "./components/contact";
+import { Why } from "./components/why";
 import SmoothScroll from "smooth-scroll";
 import "./App.css";
 
@@ -20,9 +22,12 @@ const App = () => {
       <Navigation />
       <Header />
       <Features />
-      <About />
+      <Focus />
       <Services />
       <Contact />
+      <About />
+      <Why />
+      <Alliances />
     </div>
   );
 };

@@ -1,8 +1,6 @@
 import React from "react";
 
-
 export const Contact = () => {
- 
   return (
     <div>
       <div id="contact">
@@ -12,85 +10,51 @@ export const Contact = () => {
               <div className="section-title">
                 <h2>Contáctanos</h2>
                 <p>
-                  Rellena los campos para enviarnos un correo electrónico.
+                  Rellena el siguiente formulario para estar informado de las
+                  últimas actualizaciones del proyecto, formar parte de la
+                  comunidad de Ikuskapen y ser uno de los primeros en
+                  beneficiarte de los beneficios de la plataforma.
                 </p>
               </div>
-              <form name="sentMessage" validate >
-                <div className="row">
-                  <div className="col-md-6">
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        className="form-control"
-                        placeholder="Nombre"
-                        required
-                        
-                      />
-                      <p className="help-block text-danger"></p>
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="form-group">
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        className="form-control"
-                        placeholder="Email"
-                        required
-                     
-                      />
-                      <p className="help-block text-danger"></p>
-                    </div>
-                  </div>
-                </div>
-                <div className="form-group">
-                  <textarea
-                    name="message"
-                    id="message"
-                    className="form-control"
-                    rows="4"
-                    placeholder="Mensaje"
-                    required
-            
-                  ></textarea>
-                  <p className="help-block text-danger"></p>
-                </div>
-                <div id="success"></div>
-                <button type="submit" className="btn btn-custom btn-lg">
-                  Enviar
-                </button>
-              </form>
+              <div id="success"></div>
+              <button className="btn btn-custom btn-lg">
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSfbVdd5lvhhj7ngHbRGnnGSwESyQeQg2MpxhSTGyjD0zTAvEA/viewform?usp=dialog"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    textDecoration: "none",  // Removes underline
+                    color: "inherit",        // Inherits parent's text color
+                  }}
+                >
+                  ACCEDER AL FORMULARIO
+                </a>
+              </button>
             </div>
           </div>
-          <div className="col-md-3 col-md-offset-1 contact-info">
-            <div className="contact-item">
+          <div className="col-lg-auto col-md-3 col-md-offset-1">
+            <div className="row">
               <h3>Información de contacto</h3>
-              <p>
-                <span>
-                  <i className="fa fa-map-marker"></i> Localización
-                </span>
-                 Bilbao, Bizkaia.
-              </p>
-            </div>
-            <div className="contact-item">
-              <p>
-                <span>
-                  <i className="fa fa-envelope-o"></i> Email
-                </span>
-                nohayunmail@gmail.com
-              </p>
+              <div className="contact-item">
+                <p>
+                  <span>
+                    <i className="fa fa-map-marker"></i> Localización
+                  </span>
+                  Deusto Business School <br />
+                  Universidad de Deusto - Deustuko Univertsitatea <br />
+                  Bilbao, Bizkaia.
+                </p>
+              </div>
+              <div className="contact-item">
+                <p>
+                  <span>
+                    <i className="fa fa-envelope-o"></i> Email
+                  </span>
+                  guille.bernal@opendeusto.es
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div id="footer">
-        <div className="container text-center">
-          <p>
-            &copy; 2025 Ikuskapen
-          </p>
         </div>
       </div>
     </div>

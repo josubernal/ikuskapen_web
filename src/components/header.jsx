@@ -7,7 +7,7 @@ export const Header = () => {
         <div className="overlay">
           <div className="container">
             <div className="row">
-              <div className="col-md-8 col-md-offset-2 intro-text">
+              <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 intro-text">
                 <h1>
                   IKUSKAPEN
                   <span></span>
